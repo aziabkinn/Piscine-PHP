@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		setInterval(function(){ alert("Please, use me...!"); }, 30000);
+
+		function calc() {
+			if ($('#num1').val() != "" && $('#num2').val() != "") {
+				var first = parseInt($('#num1').val(), 10);
+				var operator = $('#sign').val();
+				var second = parseInt($('#num2').val(), 10);
+			}
+			else {
+				alert("Error :(");
+				console.log("Error :(");
+				return ;
+			}
+
+			if (!isNaN(parseInt(first, 10)) && !isNaN(parseInt(second, 10))) {
+				var result = 0;
+			if (first < 0 || second < 0) {
+				alert("Error :(");
+				console.log("Error :(");
+				return ;
+			}
+			if (second == 0 && (operator == "/" || operator == "%")) {
+				alert("It’s over 9000!");
+				console.log("It’s over 9000!");
+				return ;
+			}
+			if (operator == '+') {
+				result = first + second;
+			}
+			else if (operator == '-') {
+				result = first - second;
+			}
+			else if (operator == '*') {
+				result = first * second;
+			}
+			else if (operator == '/') {
+				result = first / second;
+			}
+			else if (operator == '%') {
+				result = first % second;
+			}
+			alert(result);
+			console.log(result);
+			}
+			else {
+				alert("Error :(");
+				console.log("Error :(");
+				return ;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<input type="text" required = "true" name="num1" placeholder="first number" id="num1">
+		<select id="sign">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+			<option>%</option>
+		</select>
+		<input type="text" required = "true"  name="num2" placeholder="second number" id="num2">
+		<input type="submit" onclick="calc();" name="ok" value="Try me!">
+	</form>
+</body>
+</html>

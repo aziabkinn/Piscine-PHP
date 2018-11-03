@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Balloon</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var i = 200;
+	var ch_color= 1;
+
+	function over() {
+		$('#balloon') 
+			.css('height', i + 5) 
+			.css('width', i + 5)
+	}
+	function out() {
+		$('#balloon')
+			.css('height', i - 5)
+			.css('width', i - 5 )  
+	}
+	function resize() {
+		i += 10;
+		if (i > 420)
+			i = 200;
+		
+		$('#balloon')
+			.css('height', i + 5)
+			.css('width', i + 5 )
+			.css('border-radius', '100%')
+	 	if (ch_color == 1) {
+	 		$('#balloon')
+	 			.css('background-color', "red")
+			ch_color += 1;
+		}
+		else if (ch_color == 2) {
+			$('#balloon')
+				.css('background-color', "green")
+			ch_color += 1;	
+		}
+		else if (ch_color == 3) {
+			$('#balloon')
+				.css('background-color', "blue")
+			ch_color = 1;
+		}
+	}
+</script>
+<style type="text/css">
+	#balloon {
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		border-radius: 100%;
+	}
+</style>
+<body>
+	<div onclick="resize()" onmouseover="over()" onmouseout="out()" id="balloon"></div>
+</body>
+</html>

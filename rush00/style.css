@@ -1,0 +1,539 @@
+/***************************************
+**************** Global ****************
+***************************************/
+
+body {
+  text-align: center;
+}
+
+/***************************************
+************** Main menu ***************
+***************************************/
+
+#menu-container {
+  position: relative;
+  display: block;
+  top: -7px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  text-align: center;
+  z-index: 42;
+}
+
+#menu {
+  display: inline-block;
+  width: 800px;
+  height: 50px;
+  background-color: #FFEBAA;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 3px 3px 5px #D4BB6A;
+}
+
+.menu-button, .menu-button p, .menu-button a {
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  z-index: 1;
+}
+
+#logo-button {
+  width: 40px;
+  display: inline-block;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-right: 1px solid gray;
+}
+
+#logo-button img {
+  margin-top: 10px;
+  height: 30px;
+  width: 33px;
+}
+
+.menu-button {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  float: left;
+  border-left: 1px solid black;
+  border-right: 1px solid gray;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Adjusting the width of individual buttons */
+.menu-1 {
+  top: 0;
+  width: 100px;
+}
+
+.menu-2 {
+  width: 100px;
+}
+
+.menu-3 {
+  width: 200px;
+}
+
+.menu-final {
+  width: 128px !important;
+  border-right: none !important;
+  border-bottom-right-radius: 10px;
+}
+
+/* Dropdown menu */
+
+.menu-button li {
+  display: none;
+  width: 100%;
+  background-color: rgba(154, 213, 142, 0.8);
+}
+
+.menu-button li p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu-button:hover {
+  background-color: #68B159;
+}
+
+.menu-button:hover li {
+  display: block;
+}
+
+/****************************************
+*************** Sidebar *****************
+****************************************/
+
+#top-block {
+  height: 0;
+  width: 100%;
+  text-align: right;
+  padding-top: 20px;
+}
+
+#sidebar {
+  display: inline-block;
+  height: 15vw;
+  width: 15vw;
+  text-align: center;
+}
+
+#main-image {
+  display: block;
+  width: 15vw;
+  height: 13vw;
+  background-color: #FFEBAA;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px #D4BB6A;
+  border-bottom: 1px solid #D8CF6E;
+}
+
+#sidebar img {
+  width: 70%;
+}
+
+#authorize-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10vw;
+  height: 2vw;
+  background-color: #FFEBAA;
+  border-radius: 10px;
+  border: 1px solid #D8CF6E;
+  text-decoration: none;
+  color: black;
+}
+
+#authorize-button p {
+  margin-top: 0.4vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+#authorize-button:hover {
+  background-color: #D8CF6E;
+}
+
+#logout-button {
+  display: block;
+  position: absolute;
+  top: 2vw;
+  right: 0;
+  width: 10vw;
+  height: 2vw;
+  background-color: #FFEBAA;
+  border-radius: 10px;
+  border: 1px solid #D8CF6E;
+  text-decoration: none;
+  color: black;
+}
+
+#logout-button p {
+  margin-top: 0.4vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+#logout-button:hover {
+  background-color: #D8CF6E;
+}
+
+#basket-button {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  height: 2vw;
+  background-color: #FFEBAA;
+  border-radius: 10px;
+  border: 1px solid #D8CF6E;
+  text-decoration: none;
+  color: black;
+}
+
+#basket-button p {
+  margin-top: 0.4vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+#basket-button:hover {
+  background-color: #D8CF6E;
+}
+
+#manage-button {
+  display: block;
+  position: absolute;
+  top: 2vw;
+  right: 0;
+  width: 10vw;
+  height: 2vw;
+  background-color: #FFEBAA;
+  border-radius: 10px;
+  border: 1px solid #D8CF6E;
+  text-decoration: none;
+  color: black;
+}
+
+#manage-button p {
+  margin-top: 0.4vw;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+#manage-button:hover {
+  background-color: #D8CF6E;
+}
+
+/****************************************
+************** Login page ***************
+****************************************/
+
+#fullscreen-container {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+#login-form-container {
+  margin: auto;
+  margin-top: 300px;
+  padding-top: 20px;
+  width: 300px;
+  border: 1px solid black;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#login-form-container form input {
+  height: 25px;
+  width: 150px;
+  font-family: sans-serif;
+}
+
+.submit {
+  margin-top: 30px;
+}
+
+/****************************************
+************** Front page ***************
+****************************************/
+
+
+#not-apple {
+  background-color: black;
+}
+
+#main-showcase h1 {
+  padding: 15px 0;
+  background-color: #764B8E;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 40px;
+  text-shadow: 0px 1px #9775AA, 0px -1px 0px #260339;
+  color: #3D1255;
+}
+
+.main-section {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.main-section img {
+  display: inline-block;
+  width: 60%;
+}
+
+.main-section h1, .main-section p, .intermission-section h1, .intermission-section p {
+  color: #E9E9C0;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.main-section h1 {
+  font-size: 90px;
+}
+
+.main-section h2 {
+  color: #FF8939;
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 60px;
+  text-align: left;
+}
+
+.main-section p {
+  font-size: 25px;
+}
+
+.intermission-section p, .intermission-section a {
+  display: block;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.intermission-section a {
+  text-decoration: none;
+}
+
+.centered-text {
+  padding-top: 500px;
+}
+
+.play {
+  padding: 10px;
+  margin: 0;
+  border: 5px solid #E9E9C0;
+  border-radius: 20px;
+}
+
+.intermission-section {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background: url('https://images7.alphacoders.com/417/thumb-1920-417003.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#some-products {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section-link {
+  text-decoration: none;
+  background-color: #D4CB6A;
+  color: black;
+  border: 4px outset #FFF7AA;
+  padding: 5px;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+.otter-container {
+  display: block;
+  position: relative;
+  top: 200px;
+}
+
+/****************************************
+**************** Catalog ****************
+****************************************/
+
+#product-container {
+  margin-top: 150px;
+}
+
+.product {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 240px;
+  border: 1px solid gray;
+  margin: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.product-name {
+  margin: 0;
+  padding: 5px 0;
+  background-color: rgba(212, 195, 106, 0.7);
+  font-family: sans-serif;
+}
+
+.product-price {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  background-color: rgba(121, 158, 53, 0.7);
+  font-family: sans-serif;
+}
+
+.product-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+}
+
+/****************************************
+************* Admin panel ***************
+****************************************/
+
+.manage {
+  font-size: 18px;
+  font-family: sans-serif;
+  text-align: left !important;
+  padding-left: 20%;
+}
+
+.form-guide {
+  color: gray;
+}
+
+
+/****************************************
+**************** Product ****************
+****************************************/
+
+#product-page-container {
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#product-main-title {
+  padding: 30px 0;
+  background-color: #B9E397;
+  color: #224C00;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 3px rgba(62, 114, 19, 0.5);
+}
+
+#buy-button {
+   padding: 5px;
+   background-color: #B9E397;
+}
+
+#buy-button a h1 {
+  padding: 5px;
+  color: #224C00;
+  background-color: #FFFC9E;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 3px rgba(62, 114, 19, 0.5);
+  font-size: 20px;
+  border-radius: 10px;
+  border: 3px outset #AAAA39;
+}
+
+#buy-button a {
+  text-decoration: none;
+}
+
+#product-page-container img {
+  display: inline-block;
+  width: 30vw;
+  height: auto;
+  margin-right: 30px;
+}
+
+#product-description {
+  vertical-align: top;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+#stock {
+  font-family: sans-serif;
+}
+
+#specs {
+  background-color: #FFFC9E;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+#specs h1 {
+  font-family: sans-serif;
+}
+
+/****************************************
+************ Basket page ****************
+****************************************/
+
+.generic-container {
+  width: 100vw;
+  text-align: center;
+}
+
+.basket-table {
+  display: inline-block !important;
+}
+
+#order-button {
+  padding: 10px;
+  background-color: #55AA55;
+  font-family: sans-serif;
+  text-shadow: 1px 0px 1px white;
+  font-size: 22px;
+  width: 200px;
+}
+
+#order-button:hover {
+  background-color: #D49A6A;
+}
